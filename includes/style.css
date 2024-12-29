@@ -1,0 +1,151 @@
+/* Ana Stiller */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --success-color: #059669;
+    --error-color: #dc2626;
+    --warning-color: #d97706;
+    --info-color: #2563eb;
+    --border-radius: 0.375rem;
+    --transition: all 0.3s ease;
+}
+
+/* Bileşen Görüntüleyici Stilleri */
+.components-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.component-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.component-section:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.component-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.component-description {
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Alert Stilleri */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alert i {
+    font-size: 1.25rem;
+}
+
+.alert-success {
+    background-color: #ecfdf5;
+    color: var(--success-color);
+    border: 1px solid #6ee7b7;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: var(--error-color);
+    border: 1px solid #fecaca;
+}
+
+.alert-warning {
+    background-color: #fffbeb;
+    color: var(--warning-color);
+    border: 1px solid #fcd34d;
+}
+
+.alert-info {
+    background-color: #eff6ff;
+    color: var(--info-color);
+    border: 1px solid #bfdbfe;
+}
+
+/* Kod Önizleme Stilleri */
+.code-preview {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.code-preview pre {
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.code-preview code {
+    color: #374151;
+}
+
+/* Testimonal Stilleri */
+.testimonial {
+    text-align: left;
+    padding: 1.5rem;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Form Örnek Stilleri */
+.form-example {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .components-wrapper {
+        padding: 1rem;
+    }
+
+    .component-section {
+        padding: 1.5rem;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+} 

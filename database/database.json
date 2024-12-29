@@ -1,0 +1,199 @@
+{
+    "development": {
+        "mysql": {
+            "driver": "mysql",
+            "host": "localhost",
+            "port": 3306,
+            "database": "portfolio_db",
+            "username": "root",
+            "password": "",
+            "charset": "utf8mb4",
+            "collation": "utf8mb4_unicode_ci",
+            "prefix": "",
+            "strict": true,
+            "engine": "InnoDB",
+            "pool": {
+                "min": 2,
+                "max": 10,
+                "idle": 10000
+            }
+        },
+        "mongodb": {
+            "driver": "mongodb",
+            "host": "localhost",
+            "port": 27017,
+            "database": "portfolio_db",
+            "username": "",
+            "password": "",
+            "options": {
+                "authSource": "admin",
+                "retryWrites": true,
+                "w": "majority",
+                "maxPoolSize": 10,
+                "minPoolSize": 2
+            }
+        }
+    },
+    "production": {
+        "mysql": {
+            "driver": "mysql",
+            "host": "DB_HOST",
+            "port": "DB_PORT",
+            "database": "DB_NAME",
+            "username": "DB_USER",
+            "password": "DB_PASSWORD",
+            "charset": "utf8mb4",
+            "collation": "utf8mb4_unicode_ci",
+            "prefix": "",
+            "strict": true,
+            "engine": "InnoDB",
+            "ssl": {
+                "rejectUnauthorized": true,
+                "ca": "/path/to/ca.pem"
+            },
+            "pool": {
+                "min": 5,
+                "max": 20,
+                "idle": 10000,
+                "acquire": 30000
+            }
+        },
+        "mongodb": {
+            "driver": "mongodb",
+            "uri": "MONGODB_URI",
+            "options": {
+                "useNewUrlParser": true,
+                "useUnifiedTopology": true,
+                "retryWrites": true,
+                "w": "majority",
+                "ssl": true,
+                "maxPoolSize": 20,
+                "minPoolSize": 5,
+                "connectTimeoutMS": 10000,
+                "socketTimeoutMS": 45000
+            }
+        }
+    },
+    "testing": {
+        "mysql": {
+            "driver": "mysql",
+            "host": "localhost",
+            "port": 3306,
+            "database": "portfolio_test_db",
+            "username": "root",
+            "password": "",
+            "charset": "utf8mb4",
+            "collation": "utf8mb4_unicode_ci",
+            "prefix": "test_",
+            "strict": true,
+            "logging": true
+        },
+        "mongodb": {
+            "driver": "mongodb",
+            "host": "localhost",
+            "port": 27017,
+            "database": "portfolio_test_db",
+            "options": {
+                "useNewUrlParser": true,
+                "useUnifiedTopology": true
+            }
+        }
+    },
+    "backup": {
+        "mysql": {
+            "directory": "database/backups/mysql",
+            "filename": "backup_%DATE%.sql",
+            "schedule": "0 0 * * *",
+            "compression": true,
+            "maxBackups": 30,
+            "notifications": {
+                "email": "mertdoganay437@gmail.com",
+                "slack": "webhook_url"
+            }
+        },
+        "mongodb": {
+            "directory": "database/backups/mongodb",
+            "filename": "backup_%DATE%",
+            "schedule": "0 0 * * *",
+            "compression": true,
+            "maxBackups": 30
+        }
+    },
+    "migrations": {
+        "directory": "database/migrations",
+        "table": "migrations",
+        "schema": "database/schema",
+        "seeders": "database/seeders",
+        "timestamps": true,
+        "safe": true
+    },
+    "seeds": {
+        "directory": "database/seeds",
+        "order": [
+            "UsersSeeder",
+            "ProjectsSeeder",
+            "SkillsSeeder",
+            "BlogPostsSeeder"
+        ]
+    },
+    "cache": {
+        "default": "redis",
+        "stores": {
+            "redis": {
+                "driver": "redis",
+                "host": "localhost",
+                "port": 6379,
+                "password": null,
+                "database": 0,
+                "prefix": "portfolio:",
+                "timeout": 3600
+            },
+            "memcached": {
+                "driver": "memcached",
+                "servers": [
+                    {
+                        "host": "localhost",
+                        "port": 11211,
+                        "weight": 100
+                    }
+                ]
+            }
+        }
+    },
+    "pool": {
+        "min": 2,
+        "max": 10,
+        "idle": 10000,
+        "acquire": 30000
+    },
+    "security": {
+        "encryption": {
+            "key": "your-encryption-key",
+            "cipher": "AES-256-CBC"
+        },
+        "hash": {
+            "algorithm": "bcrypt",
+            "rounds": 10
+        }
+    },
+    "logging": {
+        "enabled": true,
+        "level": "debug",
+        "file": "storage/logs/database.log",
+        "maxFiles": 30,
+        "maxSize": "100M"
+    },
+    "monitoring": {
+        "enabled": true,
+        "slowQueryThreshold": 1000,
+        "queryLog": true,
+        "metrics": {
+            "collect": true,
+            "interval": 60
+        }
+    },
+    "debug": true,
+    "timezone": "Asia/Muğla",
+    "locale": "tr_TR",
+    "fallback_locale": "en"
+} 

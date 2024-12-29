@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Animasyon Stilleri */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* İstatistik Stilleri */
+        .stats {
+            background: var(--light-bg);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 1rem 0;
+        }
+        
+        /* Form Hata ve Başarı Mesajları */
+        .error-message {
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        
+        .success-message {
+            color: #059669;
+            background: #d1fae5;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* Sayfa özel stilleri */
+        .services .card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .services .card {
+            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(145deg, #ffffff, #f3f4f6);
+        }
+        
+        .services .card:hover i {
+            transform: scale(1.1) rotate(-5deg);
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.9;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#referanslar">Referanslar</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Dijital Çözüm Ortağınız</h1>
+                <p class="hero-text">Modern ve yenilikçi çözümlerle işinizi ileriye taşıyoruz</p>
+                <a href="#iletisim" class="btn">İletişime Geçin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section id="hizmetler" class="services p-3">
+        <div class="container">
+            <h2 class="text-center mb-3 animate-on-scroll">Hizmetlerimiz</h2>
+            <div class="grid grid-3">
+                <div class="card animate-on-scroll">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Tasarım</h3>
+                    <p>Modern ve kullanıcı dostu web siteleri geliştiriyoruz.</p>
+                </div>
+                <div class="card animate-on-scroll">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>E-Ticaret</h3>
+                    <p>Online satış platformları ile işinizi büyütün.</p>
+                </div>
+                <div class="card animate-on-scroll">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Dijital Pazarlama</h3>
+                    <p>Markanızı dijital dünyada öne çıkarın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Başarı İstatistikleri -->
+    <section class="stats p-3 animate-on-scroll">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="counter" data-target="150">0</div>
+                    <h4>Mutlu Müşteri</h4>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <div class="counter" data-target="200">0</div>
+                    <h4>Tamamlanan Proje</h4>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <div class="counter" data-target="15">0</div>
+                    <h4>Yıllık Tecrübe</h4>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-coffee"></i>
+                    <div class="counter" data-target="1000">0</div>
+                    <h4>Fincan Kahve</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="about p-3">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="about-content animate-on-scroll">
+                    <h2>Hakkımızda</h2>
+                    <p>10 yılı aşkın tecrübemizle dijital dünyada işinizi büyütmenize yardımcı oluyoruz. Uzman ekibimiz ile en son teknolojileri kullanarak projelerinizi hayata geçiriyoruz.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Profesyonel Ekip</li>
+                        <li><i class="fas fa-check"></i> Modern Teknolojiler</li>
+                        <li><i class="fas fa-check"></i> Güvenilir Hizmet</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Daha Fazla</a>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="assets/images/about.jpg" alt="Hakkımızda">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="contact p-3">
+        <div class="container">
+            <h2 class="text-center mb-3">İletişime Geçin</h2>
+            <div class="grid grid-2">
+                <div class="contact-form card">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Adınız</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Gönder</button>
+                    </form>
+                </div>
+                <div class="contact-info card">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Çıldır Mahallesi, 134. Sokak No:05</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+90 533 472 7561</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>mertdoganay437@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="footer-info">
+                    <h3>Hakkımızda</h3>
+                    <p>Profesyonel web çözümleri ve dijital pazarlama hizmetleri sunuyoruz.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="#hizmetler">Hizmetler</a></li>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Sosyal Medya</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 

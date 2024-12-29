@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bileşenler</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .components-wrapper {
+            padding: 2rem;
+        }
+
+        .component-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            border-radius: var(--border-radius);
+        }
+
+        .component-title {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .component-description {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .code-preview {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js" defer>
+        let componentManager = new ComponentManager();
+        let alertManager = new AlertManager();
+        let cardManager = new CardManager();
+        let formManager = new FormManager();
+        let footerManager = new FooterManager();
+        const footer = document.querySelector('footer');
+        footer.appendChild(footerManager.createFooter());
+
+
+        class ComponentManager {
+            constructor() {
+                this.initializeCodePreviews();
+                this.initializeClipboard();
+                this.initializeAlerts();
+                this.initializeAnimations();
+            }
+        }
+
+        class AlertManager {
+            constructor() {
+                this.initializeAlerts();
+            }
+        }
+
+        class CardManager {
+            constructor() {
+                this.initializeCards();
+            }
+        }
+
+        class FormManager {
+            constructor() {
+                this.initializeForms();
+            }
+        }
+    </script>
+    <div class="components-wrapper">
+        <h1>Tekrar Kullanılabilir Bileşenler</h1>
+        
+        <!-- Alert Bileşeni -->
+        <section class="component-section">
+            <h2 class="component-title">Alert Bileşeni</h2>
+            <p class="component-description">Farklı türlerde alert mesajları için kullanılabilir.</p>
+            
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i>
+                <p>İşlem başarıyla tamamlandı!</p>
+            </div>
+
+            <div class="alert alert-error">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Bir hata oluştu!</p>
+            </div>
+
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Dikkat! Bu işlem geri alınamaz.</p>
+            </div>
+
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <p>Bilgilendirme mesajı.</p>
+            </div>
+
+            <div class="code-preview">
+                <pre><code>&lt;div class="alert alert-success"&gt;
+    &lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;
+    &lt;p&gt;İşlem başarıyla tamamlandı!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Kart Bileşeni -->
+        <section class="component-section">
+            <h2 class="component-title">Kart Bileşeni</h2>
+            <p class="component-description">İçerik gösterimi için kullanılabilecek kart tasarımları.</p>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Örnek Resim">
+                    <div class="card-body">
+                        <h3>Kart Başlığı</h3>
+                        <p>Kart içeriği buraya gelecek. Lorem ipsum dolor sit amet.</p>
+                        <a href="#" class="btn btn-outline">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-star"></i>
+                        <h3>Özellik Kartı</h3>
+                        <p>Özellik açıklaması buraya gelecek.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="testimonial">
+                            <p>"Harika bir hizmet! Çok memnun kaldım."</p>
+                            <div class="testimonial-author">
+                                <img src="https://via.placeholder.com/50x50" alt="Kullanıcı">
+                                <div>
+                                    <h4>Ahmet Yılmaz</h4>
+                                    <p>CEO, XYZ Şirketi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-preview">
+                <pre><code>&lt;div class="card"&gt;
+    &lt;img src="resim.jpg" alt="Örnek Resim"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h3&gt;Kart Başlığı&lt;/h3&gt;
+        &lt;p&gt;Kart içeriği...&lt;/p&gt;
+        &lt;a href="#" class="btn btn-outline"&gt;Detaylar&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Form Bileşenleri -->
+        <section class="component-section">
+            <h2 class="component-title">Form Bileşenleri</h2>
+            <p class="component-description">Çeşitli form elemanları ve stilleri.</p>
+            
+            <form class="form-example">
+                <div class="form-group">
+                    <label for="name">Ad Soyad</label>
+                    <input type="text" id="name" placeholder="Adınız Soyadınız">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" placeholder="ornek@domain.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="select">Seçim Kutusu</label>
+                    <select id="select">
+                        <option value="">Seçiniz</option>
+                        <option value="1">Seçenek 1</option>
+                        <option value="2">Seçenek 2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox">
+                        Kullanım koşullarını kabul ediyorum
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Gönder</button>
+            </form>
+
+            <div class="code-preview">
+                <pre><code>&lt;div class="form-group"&gt;
+    &lt;label for="name"&gt;Ad Soyad&lt;/label&gt;
+    &lt;input type="text" id="name" placeholder="Adınız Soyadınız"&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Kod önizleme alanlarını vurgula
+        document.querySelectorAll('pre code').forEach(block => {
+            block.innerHTML = block.innerHTML
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        });
+    </script>
+</body>
+</html> 
