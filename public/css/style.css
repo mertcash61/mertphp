@@ -1,0 +1,51 @@
+:root {
+    /* Renkler */
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #f59e0b;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f3f4f6;
+    --bg-dark: #111827;
+    --white: #ffffff;
+    
+    /* Tipografi */
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    
+    /* Boşluklar */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Diğer */
+    --border-radius: 0.5rem;
+    --transition: all 0.3s ease;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Devamı için bana söyleyin, diğer CSS dosyalarını ve JavaScript dosyalarını da paylaşabilirim */ 
