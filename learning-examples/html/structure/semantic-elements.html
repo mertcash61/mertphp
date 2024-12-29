@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantik HTML Elementleri</title>
+    <style>
+        /* Semantik elementlerin görsel stillemesi */
+        header, nav, main, article, section, aside, footer {
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        header { background: #f0f0f0; }
+        nav { background: #e0e0e0; }
+        main { background: #ffffff; }
+        article { background: #f8f8f8; }
+        aside { background: #f5f5f5; }
+        footer { background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Semantik HTML Örnekleri</h1>
+        <nav>
+            <ul>
+                <li><a href="#article1">Makale 1</a></li>
+                <li><a href="#article2">Makale 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article id="article1">
+            <header>
+                <h2>Makale 1 Başlığı</h2>
+                <time datetime="2024-01-15">15 Ocak 2024</time>
+            </header>
+            <section>
+                <h3>Bölüm 1</h3>
+                <p>Makale içeriği burada...</p>
+            </section>
+            <footer>
+                <p>Yazar: Mert Doğanay</p>
+            </footer>
+        </article>
+
+        <aside>
+            <h3>İlgili Bağlantılar</h3>
+            <ul>
+                <li><a href="#">Bağlantı 1</a></li>
+                <li><a href="#">Bağlantı 2</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <address>
+            İletişim: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </footer>
+</body>
+</html> 

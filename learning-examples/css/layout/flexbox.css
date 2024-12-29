@@ -1,0 +1,31 @@
+/* Flexbox Layout Örnekleri */
+
+.container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Flex yönü */
+.row { flex-direction: row; }
+.column { flex-direction: column; }
+
+/* Hizalama */
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.align-center { align-items: center; }
+
+/* Flex öğeleri */
+.flex-item {
+    flex: 1;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+} 
