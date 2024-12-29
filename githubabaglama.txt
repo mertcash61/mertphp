@@ -1,0 +1,29 @@
+# Proje klasörüne gidin
+cd /projenizin/bulunduğu/yol
+
+# Git'i başlatın
+git init
+
+# Dosyaları staging area'ya ekleyin
+git add .
+
+# İlk commit'i yapın
+git commit -m "İlk commit: Proje dosyaları eklendi"
+
+# Ana branch'in adını 'main' olarak ayarlayın (eğer değilse)
+git branch -M main
+
+# GitHub repository'nizi remote olarak ekleyin
+git remote add origin https://github.com/kullaniciAdiniz/repository-adi.git
+
+# Dosyaları GitHub'a gönderin
+git push -u origin main
+
+Kimlik doğrulama işlemi için GitHub'da oluşturduğunuz SSH anahtarınızı kullanın.
+
+git config --global user.name "GitHub Kullanıcı Adınız"
+git config --global user.email "GitHub Email Adresiniz"
+
+Token hatası için:
+
+git remote set-url origin https://TOKEN@github.com/kullaniciAdiniz/repository-adi.git
