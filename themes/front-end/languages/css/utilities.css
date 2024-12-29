@@ -1,0 +1,21 @@
+/* Margin Yardımcıları */
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-4 { margin: 1rem; }
+.m-8 { margin: 2rem; }
+
+/* Padding Yardımcıları */
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+
+/* Text Yardımcıları */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Display Yardımcıları */
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; } 

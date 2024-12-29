@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="../scss/main.scss">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html">Logo</a>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Ana Sayfa</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Hakkımızda</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Hizmetler</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Modern Web Çözümleri</h1>
+                <p class="hero__description">
+                    Profesyonel web tasarım ve yazılım hizmetleri ile işinizi dijital dünyaya taşıyın.
+                </p>
+                <a href="#contact" class="button">İletişime Geçin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">Hakkımızda</h2>
+                <div class="about__container grid">
+                    <div class="about__data">
+                        <p class="about__description">
+                            10 yılı aşkın tecrübemizle müşterilerimize en iyi hizmeti sunuyoruz.
+                        </p>
+                        <div class="about__details">
+                            <div class="about__detail">
+                                <i class="fas fa-check"></i>
+                                <span>Profesyonel Ekip</span>
+                            </div>
+                            <div class="about__detail">
+                                <i class="fas fa-check"></i>
+                                <span>Modern Teknolojiler</span>
+                            </div>
+                            <div class="about__detail">
+                                <i class="fas fa-check"></i>
+                                <span>7/24 Destek</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="Hakkımızda">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section__title">Hizmetlerimiz</h2>
+                <div class="services__container grid">
+                    <div class="service__card">
+                        <i class="fas fa-laptop-code service__icon"></i>
+                        <h3 class="service__title">Web Tasarım</h3>
+                        <p class="service__description">
+                            Modern ve kullanıcı dostu web siteleri tasarlıyoruz.
+                        </p>
+                    </div>
+                    <div class="service__card">
+                        <i class="fas fa-mobile-alt service__icon"></i>
+                        <h3 class="service__title">Mobil Uyumluluk</h3>
+                        <p class="service__description">
+                            Tüm cihazlarda kusursuz çalışan responsive tasarımlar.
+                        </p>
+                    </div>
+                    <div class="service__card">
+                        <i class="fas fa-search service__icon"></i>
+                        <h3 class="service__title">SEO Optimizasyonu</h3>
+                        <p class="service__description">
+                            Arama motorlarında üst sıralarda yer alın.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title">İletişim</h2>
+                <div class="contact__container grid">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="fas fa-envelope contact__card-icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">mertdoganay437@gmail.com</span>
+                        </div>
+                        <div class="contact__card">
+                            <i class="fas fa-phone contact__card-icon"></i>
+                            <h3 class="contact__card-title">Telefon</h3>
+                            <span class="contact__card-data">+90 533 472 7561</span>
+                        </div>
+                        <div class="contact__card">
+                            <i class="fas fa-map-marker-alt contact__card-icon"></i>
+                            <h3 class="contact__card-title">Adres</h3>
+                            <span class="contact__card-data">Muğla, Türkiye</span>
+                        </div>
+                    </div>
+                    <form action="" class="contact__form">
+                        <div class="contact__form-group">
+                            <input type="text" placeholder="Adınız" class="contact__form-input">
+                        </div>
+                        <div class="contact__form-group">
+                            <input type="email" placeholder="Email" class="contact__form-input">
+                        </div>
+                        <div class="contact__form-group">
+                            <textarea placeholder="Mesajınız" class="contact__form-input"></textarea>
+                        </div>
+                        <button type="submit" class="button">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Hakkımızda</h3>
+                    <p class="footer__description">
+                        Profesyonel web çözümleri ve dijital pazarlama hizmetleri sunuyoruz.
+                    </p>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">Linkler</h3>
+                    <ul class="footer__links">
+                        <li><a href="#home" class="footer__link">Ana Sayfa</a></li>
+                        <li><a href="#about" class="footer__link">Hakkımızda</a></li>
+                        <li><a href="#services" class="footer__link">Hizmetler</a></li>
+                        <li><a href="#contact" class="footer__link">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">Sosyal Medya</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copy">© 2024 Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html> 

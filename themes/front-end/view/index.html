@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mert Doğanay | Web Developer</title>
+    <link rel="stylesheet" href="../scss/main.scss">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html">Mert Doğanay</a>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Ana Sayfa</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolyo</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Yetenekler</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Web Developer & Designer</h1>
+                <p class="hero__description">
+                    Modern ve kullanıcı dostu web siteleri geliştiriyorum.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#portfolio" class="button">Projelerimi Gör</a>
+                    <a href="#contact" class="button button--outline">İletişime Geç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <h2 class="section__title">Portfolyo</h2>
+            <div class="portfolio__container grid">
+                <article class="portfolio__card">
+                    <img src="assets/img/project1.jpg" alt="Proje 1" class="portfolio__img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">E-Ticaret Projesi</h3>
+                        <p class="portfolio__description">
+                            Modern bir e-ticaret sitesi tasarımı ve geliştirmesi.
+                        </p>
+                        <a href="#" class="button button--small">Demo</a>
+                    </div>
+                </article>
+
+                <article class="portfolio__card">
+                    <img src="assets/img/project2.jpg" alt="Proje 2" class="portfolio__img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Blog Platformu</h3>
+                        <p class="portfolio__description">
+                            Kişisel blog platformu tasarımı ve geliştirmesi.
+                        </p>
+                        <a href="#" class="button button--small">Demo</a>
+                    </div>
+                </article>
+
+                <article class="portfolio__card">
+                    <img src="assets/img/project3.jpg" alt="Proje 3" class="portfolio__img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Mobil Uygulama</h3>
+                        <p class="portfolio__description">
+                            React Native ile geliştirilen mobil uygulama.
+                        </p>
+                        <a href="#" class="button button--small">Demo</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <h2 class="section__title">Yetenekler</h2>
+            <div class="skills__container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Frontend</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="fab fa-html5"></i>
+                                <div>
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__level">İleri Seviye</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fab fa-css3-alt"></i>
+                                <div>
+                                    <h3 class="skills__name">CSS</h3>
+                                    <span class="skills__level">İleri Seviye</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fab fa-js"></i>
+                                <div>
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__level">Orta Seviye</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Backend</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="fab fa-php"></i>
+                                <div>
+                                    <h3 class="skills__name">PHP</h3>
+                                    <span class="skills__level">Orta Seviye</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fab fa-python"></i>
+                                <div>
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__level">Başlangıç Seviye</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fas fa-database"></i>
+                                <div>
+                                    <h3 class="skills__name">MySQL</h3>
+                                    <span class="skills__level">Orta Seviye</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section__title">İletişim</h2>
+            <div class="contact__container grid">
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <i class="fas fa-envelope contact__card-icon"></i>
+                        <h3 class="contact__card-title">Email</h3>
+                        <span class="contact__card-data">mertdoganay437@gmail.com</span>
+                    </div>
+                    <div class="contact__card">
+                        <i class="fas fa-phone contact__card-icon"></i>
+                        <h3 class="contact__card-title">Telefon</h3>
+                        <span class="contact__card-data">+90 533 472 7561</span>
+                    </div>
+                    <div class="contact__card">
+                        <i class="fas fa-map-marker-alt contact__card-icon"></i>
+                        <h3 class="contact__card-title">Konum</h3>
+                        <span class="contact__card-data">Muğla, Türkiye</span>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form">
+                    <div class="contact__form-group">
+                        <input type="text" placeholder="Adınız" class="contact__form-input" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <input type="email" placeholder="Email Adresiniz" class="contact__form-input" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <textarea placeholder="Mesajınız" class="contact__form-input" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Mesaj Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Sosyal Medya</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copy">© 2024 Mert Doğanay. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html> 
